@@ -73,7 +73,7 @@ defmodule AppBasic.MixProject do
       "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"],
-      "assets.setup": ["tailwind.install --if-missing", "esbuild.install --if-missing"],
+      "assets.setup": ["tailwind.install --if-missing https://people.freebsd.org/~dch/pub/tailwind/v3.3.2/tailwindcss-freebsd-x64", "esbuild.install --if-missing"],
       "assets.build": ["tailwind app_basic", "esbuild app_basic"],
       "assets.deploy": [
         "npm i --prefix assets",
